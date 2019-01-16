@@ -1,0 +1,9 @@
+﻿<br />
+<form class="form-inline" action="@Url.Action("ShowResults")" method="post">
+    <input style="width: 100%; margin-left:auto; border: groove; height: 40px;"
+           class="form-control" id="inputdefault" autofocus="autofocus" type="text" name="search" required/>
+    <button type="submit" style="height: 40px;" class="btn btn-success">Custom search</button><br />
+    <h3>Username: @Session["userName"].ToString()</h3>
+    <a href="@Url.Action("LogOut","Login")">LogOut</a>
+    <br />
+</form>

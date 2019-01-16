@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LoginDataBaseModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ResultR">
+          <Key>
+            <PropertyRef Name="Ind" />
+          </Key>
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Link" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Snippet" Type="nvarchar" MaxLength="200" />
+          <Property Name="Source" Type="nvarchar(max)" />
+          <Property Name="Query" Type="nvarchar" MaxLength="200" />
+          <Property Name="Ind" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="LoginDataBaseModel1StoreContainer">
+          <EntitySet Name="ResultR" EntityType="Self.ResultR" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LoginDataBaseModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ResultR">
+          <Key>
+            <PropertyRef Name="Ind" />
+          </Key>
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Snippet" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Query" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Ind" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="LoginDataBaseEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ResultRs" EntityType="Self.ResultR" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LoginDataBaseModel1StoreContainer" CdmEntityContainer="LoginDataBaseEntities1">
+          <EntitySetMapping Name="ResultRs">
+            <EntityTypeMapping TypeName="LoginDataBaseModel1.ResultR">
+              <MappingFragment StoreEntitySet="ResultR">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Snippet" ColumnName="Snippet" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="Ind" ColumnName="Ind" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

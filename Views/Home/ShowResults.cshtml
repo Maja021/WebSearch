@@ -1,0 +1,32 @@
+﻿@model List<MVCLogin.Models.ResultR>
+<br />
+@{
+    Html.RenderPartial("Index");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    ...
+    </head>
+        <body>
+            <div1>...</div1>           
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li style="width: 500px">
+                        <a href="@item.Link" style="color:blue">@item.Title</a><br />
+                        <span style="font-size: 15px; color:green">@item.Link</span><br />
+                        <span style="color:gray;">@item.Snippet</span><br />
+
+                    </li>
+                }
+
+            </ul>
+            <div2>...</div2>
+        </body>
+</html>
+
+
+
+
